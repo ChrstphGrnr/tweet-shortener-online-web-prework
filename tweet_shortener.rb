@@ -7,11 +7,10 @@ end
 
 def word_substituter(tweets)
   tweets_ary = tweets.split(" ")
-  
-    tweets_ary.each.with_index do |word, index|
-      if dictionary.keys.join(" ").include?(word)
-        tweets_ary[index].replace(dictionary[:word])
-       end
+  dictonary.each do |key, value|
+    if tweets_ary.any? {|word| word.include?(key)}
+      tweets_ary(key) = value
     end
+  end
   tweets_ary.join(" ")
 end
