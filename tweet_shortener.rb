@@ -9,7 +9,7 @@ def word_substituter(tweets)
   dictionary_keys = dictionary.keys
     tweets_ary.each.with_index do |word, index|
       if dictionary_keys.include?(word)
-        tweets_ary[index] = dictionary[:word]
+        tweets_ary[#{index}] = dictionary[:word]
       end
     end
   tweets_ary.join(" ")
