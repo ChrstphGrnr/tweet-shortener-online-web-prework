@@ -11,5 +11,5 @@ def word_substituter(tweets)
         tweets_ary[index] = dictionary[:word]
       end
     end
-  tweets_ary.join(" ")
+  tweets_ary.join
 end
