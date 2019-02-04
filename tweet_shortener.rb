@@ -6,11 +6,12 @@ def dictionary
 end
 
 def word_substituter(tweets)
-  tweets_ary = tweets.split(" ").noASCI
-  binding.pry
+  tweets_ary = tweets.split(" ")
+  
     tweets_ary.each.with_index do |word, index|
       if dictionary.has_key?(word)
         tweets_ary[index] = dictionary[:word]
+        binding.pry
       end
     end
   tweets_ary.join(" ")
