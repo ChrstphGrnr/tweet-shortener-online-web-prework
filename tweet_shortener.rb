@@ -7,7 +7,7 @@ end
 
 def word_substituter(tweets)
   tweets_ary = tweets.split(" ")
-  dictonary.each do |key, value|
+  dictionary.each do |key, value|
     if tweets_ary.any? {|word| word.include?(key)}
       tweets_ary(key) = value
     end
